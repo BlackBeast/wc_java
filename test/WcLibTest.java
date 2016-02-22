@@ -55,4 +55,26 @@ public class WcLibTest {
     int lineCount = wc.getLineCount(testString);
     assertEquals(2,lineCount);
   }
+
+  // tests for wc -w  option
+  @Test
+  public void get_word_count_of_empty_string(){
+    String testString ="";
+    int wordCount = wc.getWordCount(testString);
+    assertEquals(1,wordCount);
+  }
+
+  @Test
+  public void get_word_count_of_single_line_string(){
+    String testString = "This sentence is to test the byte length.";
+    int wordCount = wc.getWordCount(testString);
+    assertEquals(8,wordCount);
+  }
+
+  @Test
+  public void get_word_count_of_multi_word_string(){
+    String testString = "This sentence is to test the byte length.\nBy the way this is multi line.";
+    int wordCount = wc.getWordCount(testString);
+    assertEquals(15,wordCount);
+  }
 }
