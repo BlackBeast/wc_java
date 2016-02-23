@@ -1,0 +1,2 @@
+This is a two line text file.
+it's for testing wc.

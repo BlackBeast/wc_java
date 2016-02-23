@@ -13,4 +13,13 @@ public class WcLib{
   	if(text == null) return 0;
   	return text.trim().split("\\s+").length;
   }
+
+  public int[] countAll(String text){
+  	int[] result = new int[3];
+  	result[0] = getLineCount(text);
+  	result[1] = getWordCount(text);
+  	result[2] = getByteCount(text);
+
+  	return result;
+  }
 }
